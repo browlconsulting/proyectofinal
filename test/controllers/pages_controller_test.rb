@@ -1,0 +1,34 @@
+require 'test_helper'
+
+class PagesControllerTest < ActionDispatch::IntegrationTest
+  test "should get index" do
+    get pages_index_url
+    assert_response :success
+  end
+
+  test "should get search" do
+    get pages_search_url
+    assert_response :success
+  end
+
+  test "should get promoted" do
+    get pages_promoted_url
+    assert_response :success
+  end
+
+  test "should get faq" do
+    get pages_faq_url
+    assert_response :success
+  end
+
+  test "should get about_us" do
+    get pages_about_us_url
+    assert_response :success
+  end
+
+  test "should get contact" do
+    get pages_contact_url
+    assert_response :success
+  end
+
+end
