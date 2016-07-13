@@ -1,47 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>InstParking le da la bienvenida ...</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!--
         Bootstrap cdn
         =============
   -->
   
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 100%;
+  }
+  .wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+  }
+  footer {
+    position: relative;
+    /* Altura total del footer en px con valor negativo */
+    margin-top: -50px;
+    /* Altura del footer en px. Se han restado los 5px del margen
+    superior mas los 5px del margen inferior
+    */
+    height: 40px;
+    padding:5px 0px;
+    clear: both;
+    background: #286af0;
+    text-align: center;
+    color: #fff;
+        }
+    .define {
+    width:960px;
+    margin:0 auto;
+        }
+  </style>
 
 </head>
-<body background = "http://www.consultoresretro.com/images/marca%20de%20agua.jpg">
+<body background ="http://www.gersa.com/images/fondo.jpg">
 
 <div class="container">
-
   <!-- 
     Header nav
   -->
-  <div class="masthead">
-    <h3 class="text-muted">InstaParking</h3>
-  <nav class="navbar navbar-default">
+
+<nav class="navbar navbar-default">
   <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">InstaParking</a>
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <%= render 'layouts/menu' %>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
   </div>
-  
-  <% flash.each do |key, value| %>
+</nav>
+
+<% flash.each do |key, value| %>
     <div class="alert alert-info alert-<%= key %> alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <%= value %>
@@ -51,16 +91,11 @@
       <div>
         <%= yield %>
       </div>  
-
-
-      <!-- Site footer -->
-      <footer class="col-md-12">
-        <p>© 2016 InstaParking, Inc.</p>
-      </footer>
-
-    </div>
-
-
-
+</div>
+<footer>
+<div class="define">
+    <p>© InstaParking 2016</p>
+</div>
+</footer>
 </body>
 </html>
